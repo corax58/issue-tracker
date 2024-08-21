@@ -6,13 +6,13 @@ import { FaBug } from "react-icons/fa6";
 import classNames from "classnames";
 
 const Navbar = () => {
+  const currentPath = usePathname();
+
   const Links = [
     { href: "/", label: "Dashboard" },
     { href: "/issues", label: "issues" },
   ];
 
-  const currentPath = usePathname();
-  console.log(currentPath);
   return (
     <nav className="flex h-14 border-b items-center space-x-6 px-5 mb-5">
       <Link href={"/"}>
